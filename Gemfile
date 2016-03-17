@@ -7,7 +7,7 @@ gem 'rails', '4.1.0'
 gem 'sqlite3', group: [:development, :test]
 
 # Use postgresql as the database for production
-group :production do
+group :production 
     gem 'pg'
     gem 'rails_12factor'
 end
