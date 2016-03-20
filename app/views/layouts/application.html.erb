@@ -19,7 +19,7 @@
       </button>
         <!-- link_to is a rails function
           navbar-brand is a special bootstrap class,
-          the idea here is that we're create a link container with a boostrap class that includes both a font-awesome icon and the Dev Match site title. so both will be valid links to the home home path (root_path in routes) 
+          the idea here is that we're creating a link container with a boostrap class that includes both a font-awesome icon and the Dev Match site title so both will be valid links to the home home path (root_path in routes) 
           
           Version 1:
               <%= link_to 'SaaS', root_path, class: 'navbar-brand' %>
@@ -32,6 +32,7 @@
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'FAQ', faq_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
