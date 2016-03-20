@@ -14,9 +14,5 @@
  *= require_self
  */
 
-/* Added bootsrap dependencies */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-/* Added font-awesome dependencies */
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
+// Moved code that was here to a new custom.css.scss file to clean things up.
