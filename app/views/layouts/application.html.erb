@@ -31,7 +31,9 @@
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
+        <!-- Below are ruby links to the different pages in the views folder, but referencing routes. the new_contact is auto generated from resources :contacts -->
         <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Contact Us', new_contact_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
