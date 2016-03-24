@@ -17,11 +17,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <!-- link_to is a rails function
-          navbar-brand is a special bootstrap class,
-          the idea here is that we're creating a link container with a boostrap class that includes both a font-awesome icon and the Dev Match site title so both will be valid links to the home home path (root_path in routes) 
-          
-          Version 1:
+                    <!-- link_to is a rails function
+                      navbar-brand is a special bootstrap class,
+                      the idea here is that we're creating a link container with a boostrap class that includes both a font-awesome icon and the Dev Match site title so both will be valid links to the home home path (root_path in routes) 
+                      
+                      Version 1:
               <%= link_to 'SaaS', root_path, class: 'navbar-brand' %>
         -->
       <%= link_to root_path, class: 'navbar-brand' do %>
@@ -31,7 +31,7 @@
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <!-- Below are ruby links to the different pages in the views folder, but referencing routes. the new_contact is auto generated from resources :contacts -->
+                <!-- Below are ruby links to the different pages in the views folder, but referencing routes. the new_contact is auto generated from resources :contacts -->
         <li><%= link_to 'About', about_path %></li>
         <li><%= link_to 'Contact Us', new_contact_path %></li>
       </ul>
@@ -40,6 +40,10 @@
 </nav>
 
 <div class="container">
+    <!-- looping through, capturing the key and value pair (e.g. |success, success_message|) then displaying the value in a div tag and displaying the key in an alert pop-up -->
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class:"alert alert-#{key}" %>
+  <% end %>
   <%= yield %>
 </div>
 
