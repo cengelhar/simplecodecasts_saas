@@ -9,12 +9,13 @@ class ContactsController < ApplicationController
     
       # when the submit button is clicked, it initiates a save method. This if statement determine where the user will get redirected after the click, and if what message will potentiall occur based on the successfullness of the submission
     if @contact.save
-        # success and error are special alert bootstrap class that will pre-format the messages.
+        # success and danger are special alert bootstrap class that will pre-format the messages. Flash contains a key, value pair
+        #  http://getbootstrap.com/components/#alerts
       flash[:success] = "Message Sent."
       redirect_to new_contact_path
     else
-      flash[:error] = "Message failed to send."
-      redirect_to new_contact_path, notice
+      flash[:danger] = "Message failed to send."
+      redirect_to new_contact_path
     end
   end
   
