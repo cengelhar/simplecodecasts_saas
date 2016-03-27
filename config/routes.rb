@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    #devise auto-generated when gem installed
   devise_for :users
   resources :contacts
   get '/about' => 'pages#about'
