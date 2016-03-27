@@ -1,6 +1,6 @@
     # ActionMailer::Base is a rails library. So we're creating an ContactMailer class and having it inherit the attributes of the ActionMailer::Base attributes
 class ContactMailer < ActionMailer::Base
-  default to: 'your@email_address.com'
+  default to: 'cengelha@gmail.com'
   
   def contact_email(name, email, body)
     @name = name
