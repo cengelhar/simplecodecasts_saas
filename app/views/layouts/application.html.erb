@@ -31,7 +31,7 @@
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <div class="nav navbar-nav navbar-right">
-          <!-- if current_user is specific to the devise library. It checks to see if a user is logged in. The if statements is designed to toggle between which buttons render for the proper loggged in/loogged out context. --
+          <!-- if current_user is specific to the devise library. It checks to see if a user is logged in. The if statements is designed to toggle between which buttons render for the proper loggged in/loogged out context. -->
         <% if current_user %>
           <%= button_to "Sign Out", destroy_user_session_path, class: 'btn btn-primary navbar-btn', method: :delete %>
         <% else %>
