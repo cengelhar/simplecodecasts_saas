@@ -10,14 +10,20 @@
             <h2 class="text-center">Basic Membership</h2>
             <h4>Sign up for a free account to gain access to the community.</h4>
             <br/>
-            <%= link_to "Sign up with Free", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+                <!-- 
+                    (plan: @pro_plan.id)
+                is calling the variable that is defined in the pages_controller, which is equal to the id of the plan in the Plan class (either 1 for basic or 2 for pro) 
+                This is call query string parameters
+                -->
+            <%= link_to "Sign up with Free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
     </div>
      <div class="col-md-6">
         <div class="well">
             <h2 class="text-center">Pro Membership</h2>
             <h4>Sign up for the pro account for $10/month and gain access to the community and contact information!</h4>
-            <%= link_to "Sign up with Pro", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+                
+            <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
         </div>
     </div>
 </div>
