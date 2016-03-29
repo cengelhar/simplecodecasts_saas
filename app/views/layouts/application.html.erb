@@ -37,7 +37,9 @@
         <% else %>
         
           <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get %>
-          <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success navbar-btn', mthod: :get %>
+            <!-- This sign up button will be deprecated because the user will be required to use the sign up button on the home page to choose a plan. Removed the < at beginning or ruby to comment out.
+                %= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success navbar-btn', mthod: :get %>
+            -->
         <% end %>
       </div>
       <ul class="nav navbar-nav navbar-right">
