@@ -54,7 +54,7 @@ gem 'devise', '3.4.1'
 gem 'stripe', '1.16.1'
 
 # Added at the same time as Stripe gem added
-    # Used to hide secret key
+    # Used to hide secret key (primarily because Github is public)
     # "Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file"
 gem 'figaro', '1.0.0'
 
