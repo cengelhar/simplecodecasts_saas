@@ -34,7 +34,8 @@ gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+    # commented this our because of potential conflict with the stripe gem
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.0'
@@ -47,6 +48,15 @@ gem 'spring',        group: :development
 
 # Use Devise for authentication
 gem 'devise', '3.4.1'
+
+# Use Stripe integration for payment processing
+    # "Stripe is the easiest way to accept payments online. See https://stripe.com for details."
+gem 'stripe', '1.16.1'
+
+# Added at the same time as Stripe gem added
+    # Used to hide secret key
+    # "Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file"
+gem 'figaro', '1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
