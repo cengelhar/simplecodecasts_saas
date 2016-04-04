@@ -1,6 +1,10 @@
     <!-- this entire form was originally in the devise/new.html.erb file -->
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <!-- added html: {id: "basic_form"} in order to differntiate the id between basic and pro for use in the javascript related to the stripe integration -->
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: "basic_form"}) do |f| %>
 <%= devise_error_messages! %>
+
+      <!-- This field is used to store the plan value (1 or 2) -->
+    <%= hidden_field_tag 'plan', params[:plan] %>
 
     <div class="field form-group">
       <%= f.label :email %><br />
