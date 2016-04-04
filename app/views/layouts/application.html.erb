@@ -2,10 +2,16 @@
 <html>
 <head>
   <title>Dev Match</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %> <!-- removed turbolink attributed during stripe configuration -->
-  <%= javascript_include_tag 'application'%> <!-- removed turbolink attributed during stripe configuration -->
+  <%= stylesheet_link_tag    'application', media: 'all' %> 
+    <!-- added javascript tage to rund javascript for stripe integration -->
+  <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
+  <%= javascript_include_tag 'application'%> 
+    <!-- removed turbolink attribute that was here during stripe configuration -->
+    
+    <!-- added environment variable meta tage to provide stripe authentication to be used in javascript to initiate stripe integration during registration. the variable is stores in the stripe.rb initiatlizer file, which references the value in the application.yml config file (hidden) -->
+  <%= tag :meta, :name => "stripe_key", :content => STRIPE_PUBLIC_KEY %>
   <%= csrf_meta_tags %>
-</head>
+</head>d
 <body>
 
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
