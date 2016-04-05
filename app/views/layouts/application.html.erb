@@ -8,7 +8,7 @@
   <%= javascript_include_tag 'application'%> 
     <!-- removed turbolink attribute that was here during stripe configuration -->
     
-    <!-- added environment variable meta tage to provide stripe authentication to be used in javascript to initiate stripe integration during registration. the variable is stores in the stripe.rb initiatlizer file, which references the value in the application.yml config file (hidden) -->
+    <!-- added environment variable meta tage to provide stripe authentication to be used in javascript to initiate stripe integration during registration. the variable is stores in the stripe.rb initiatlizer file, which references the value in the application.yml config file (hidden -->
   <%= tag :meta, :name => "stripe_key", :content => STRIPE_PUBLIC_KEY %>
   <%= csrf_meta_tags %>
 </head>d
