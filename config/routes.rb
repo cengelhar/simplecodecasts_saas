@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     #devise auto-generated when gem installed
-  devise_for :users
+        # added , controllers: { registrations: 'users/registrations' }... to make the routes file aware of the registrations_controller we added to integrate with stripe
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :contacts
   get '/about' => 'pages#about'
   root 'pages#home'
