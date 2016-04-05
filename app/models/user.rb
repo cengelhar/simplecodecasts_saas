@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
     #create relationship to plan class
   belongs_to :plan
   
+  attr_accessor :stripe_card_token
+  
     # this method is used in the registrations_controller
   def save_with_payment
       # if valid (ruby)
@@ -15,7 +17,7 @@ class User < ActiveRecord::Base
       customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
         # save all of this to the User database
           # needed to run a migration to add AddStripeCustomerTokenToUsers column to User database
-      self.stripe_customer_token = customer_id
+      self.stripe_customer_token = customer.id
       save!
     end
   end
