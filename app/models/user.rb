@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
     #create relationship to plan class
   belongs_to :plan
   
-  
     # this method is used in the registrations_controller
   def save_with_payment
       # if valid (ruby)
