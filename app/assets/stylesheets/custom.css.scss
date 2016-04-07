@@ -4,3 +4,10 @@
 /* Added font-awesome dependencies */
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+    /* this was pulled from inspectinv elements of a bootstrap alert class example */
+.alert-notice {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;  
+}
