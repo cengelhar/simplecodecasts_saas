@@ -15,9 +15,10 @@ class User < ActiveRecord::Base
     if valid?
         # create a variable that stores all of the values from the form as well as a new stripe_card_token that will be returned from stripe
       customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+        # set a variable that is equal to the id attribute of the customer object that was created above
         # save all of this to the User database
           # needed to run a migration to add AddStripeCustomerTokenToUsers column to User database
-      self.stripe_customer_token = customer.id
+      self.stripe_customer_token = customer.id # User.stripe_customer_token = ....
       save!
     end
   end

@@ -5,9 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super do |resource|
       if params[:plan]
-        resource.plan_id = params[:plan]
+        resource.plan_id = params[:plan] # User.plan_id = 1 or User.plan_id = 2
         if resource.plan_id == 2
-          resource.save_with_payment
+          resource.save_with_payment # user.rb model file
         else
           resource.save
         end
