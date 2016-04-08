@@ -3,6 +3,11 @@ Rails.application.routes.draw do
         # added , controllers: { registrations: 'users/registrations' }... to make the routes file aware of the registrations_controller we added to integrate with stripe
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :contacts
+    # nesting profile route within user path
+  resources :users do
+      # note that resource is singular here
+    resource :profile
+    end
   get '/about' => 'pages#about'
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
