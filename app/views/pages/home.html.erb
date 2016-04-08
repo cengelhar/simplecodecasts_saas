@@ -1,3 +1,11 @@
+    <!-- current_user is a devise helper filter -- https://github.com/plataformatec/devise#controller-filters-and-helpers
+    
+        the current_user is just an example of query string parameter technique to pass a value in the link url
+        
+        if current_user checks to see is someone is logged in.
+    -->
+<%= link_to "Create your profile!", new_user_profile_path(current_user, hello: 'world') if current_user %>
+
 <div class="jumbotron text-center">
     <h1>Home is where Dev Match is.</h1>
     <h3>A membership site where you can meet your dream developer</h3>
