@@ -4,7 +4,7 @@
         
         if current_user checks to see is someone is logged in.
     -->
-<%= link_to "Create your profile!", new_user_profile_path(current_user, hello: 'world') if current_user %>
+<%= link_to "Create your profile!", new_user_profile_path(current_user) if current_user %>
 
 <div class="jumbotron text-center">
     <h1>Home is where Dev Match is.</h1>
