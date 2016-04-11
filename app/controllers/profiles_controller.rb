@@ -22,6 +22,7 @@ class ProfilesController < ApplicationController
         else
                 # else render the new action (above)
             render action: :new
+        end
     end
     
     
