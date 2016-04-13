@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
             # create variable that stores current_user's user_id
         @user = User.find( params[:user_id] )
             # create a variable that uses the @user value to create a profile
-        @profile = @user.build_profile
+        @profile = Profile.new
     end
     
         # to save to database
