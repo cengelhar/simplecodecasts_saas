@@ -52,7 +52,7 @@ class ProfilesController < ApplicationController
     # private whitelisting (used in above actions)
     private
         def profile_params
-            params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+            params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
         end
             
             # checks if user id in url == current_user.id

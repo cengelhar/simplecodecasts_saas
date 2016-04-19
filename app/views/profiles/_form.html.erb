@@ -2,7 +2,7 @@
     
     <!-- need to have url: root when singular (@profile)
         Copied the form fields from project. These are repetitive -->
-<%= form_for @profile, url: user_profile_path do |f| %>
+<%= form_for @profile, url: user_profile_path, html: { multipart: true } do |f| %>
     <div class="form-group">
       <%= f.label :first_name %>
       <%= f.text_field :first_name, class: 'form-control' %>
@@ -10,6 +10,11 @@
     <div class="form-group">
       <%= f.label :last_name %>
       <%= f.text_field :last_name, class: 'form-control' %>
+    </div>
+        <!-- file gets stored in the buplic folder -->
+     <div class="form-group">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar, class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :job_title %>
@@ -29,5 +34,5 @@
     </div>
     <div class="form-group">
       <%= f.submit "Update Profile", class: 'btn btn-primary' %>
-</div>
+    </div>
 <% end %>

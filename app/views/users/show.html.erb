@@ -1,5 +1,8 @@
     <!-- one the @user variable is created in the profile_controllers file, and we have a relationship between a user and their profile, we can use dot chaining to hammer down to a specific user's attribute -->
-<%= @user.profile.first_name %> <%= @user.profile.last_name %>
+    <!-- from paperclip documentation: https://github.com/thoughtbot/paperclip -->
+<%= image_tag @user.profile.avatar.url %><br>
+
+<%= @user.profile.first_name %> <%= @user.profile.last_name %><br>
 <%= @user.profile.job_title %><br/>
     <!-- only display phone_number and contact_email if the user is a pro user (plan_id == 2) -->
 <% if current_user.plan_id == 2 %>
