@@ -8,3 +8,22 @@
     color: white;
     text-align: center;
 }
+
+    /* inspected element of green button - http://getbootstrap.com/css/#buttons */
+.well.profile-block {
+    color: #fff;
+         /* nested css is a sass thing - http://sass-lang.com/guide*/
+    h3 {
+        margin-top: 0;
+    }
+}
+
+.well.profile-description {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.well.contact-info {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
