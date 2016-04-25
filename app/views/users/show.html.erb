@@ -2,7 +2,7 @@
     <div class="col-md-3 text-center">
             <!-- one the @user variable is created in the profile_controllers file, and we have a relationship between a user and their profile, we can use dot chaining to hammer down to a specific user's attribute -->
             <!-- from paperclip documentation: https://github.com/thoughtbot/paperclip -->
-        <%= image_tag @user.profile.avatar.url %>
+        <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
     </div>
     
     <div class="col-md-6">
@@ -14,7 +14,7 @@
              <%= @user.profile.description %>
          </div>
             <!-- only display phone_number and contact_email if the user is a pro user (plan_id == 2) -->
-        <% if true#current_user.plan_id == 2 %>
+        <% if current_user.plan_id == 2 %>
             <div class="well profile-block contact-info">
             <h3>Contact Info</h3>
                 <%= @user.profile.phone_number %><br/>

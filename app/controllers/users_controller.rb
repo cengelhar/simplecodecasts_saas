@@ -3,7 +3,9 @@ class UsersController < ApplicationController
         # first used in profiles_controller.rb
     before_action :authenticate_user!
     
+        # to show all users in the Community section
     def index
+        @users = User.all
     end
     
     def show
